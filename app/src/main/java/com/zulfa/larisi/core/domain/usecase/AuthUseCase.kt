@@ -11,4 +11,6 @@ interface AuthUseCase {
     fun getCurrentUser(): User?
 
     fun signOut()
+
+    fun isUserSignedIn(): Boolean
 }

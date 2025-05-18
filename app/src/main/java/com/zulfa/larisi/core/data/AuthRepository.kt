@@ -30,4 +30,8 @@ class AuthRepository(
     override fun signOut() {
         firebaseDataSource.signOut()
     }
+
+    override fun isUserSignedIn(): Boolean {
+        return firebaseDataSource.isUserSignedIn()
+    }
 }

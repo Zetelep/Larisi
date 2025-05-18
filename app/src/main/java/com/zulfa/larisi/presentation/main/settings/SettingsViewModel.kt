@@ -1,4 +1,4 @@
-package com.zulfa.larisi.ui.settings
+package com.zulfa.larisi.presentation.main.settings
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

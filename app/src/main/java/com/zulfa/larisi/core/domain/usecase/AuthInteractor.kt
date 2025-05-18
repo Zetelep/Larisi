@@ -20,4 +20,8 @@ class AuthInteractor(
     override fun signOut() {
         repository.signOut()
     }
+
+    override fun isUserSignedIn(): Boolean {
+        return repository.isUserSignedIn()
+    }
 }

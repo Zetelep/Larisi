@@ -22,4 +22,8 @@ class FirebaseDataSource(private val auth: FirebaseAuth) {
     fun signOut() {
         auth.signOut()
     }
+
+    fun isUserSignedIn(): Boolean {
+        return auth.currentUser != null
+    }
 }

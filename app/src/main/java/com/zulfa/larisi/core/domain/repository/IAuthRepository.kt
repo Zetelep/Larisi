@@ -8,4 +8,5 @@ interface IAuthRepository{
     fun signInWithGoogle(idToken: String): Flow<Resource<User>>
     fun getCurrentUser(): User?
     fun signOut()
+    fun isUserSignedIn(): Boolean
 }

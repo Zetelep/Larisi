@@ -7,25 +7,25 @@
 
     <fragment
         android:id="@+id/nav_transform"
-        android:name="com.zulfa.larisi.ui.transform.TransformFragment"
+        android:name="com.zulfa.larisi.presentation.main.transform.TransformFragment"
         android:label="@string/menu_transform"
         tools:layout="@layout/fragment_transform" />
 
     <fragment
         android:id="@+id/nav_reflow"
-        android:name="com.zulfa.larisi.ui.reflow.ReflowFragment"
+        android:name="com.zulfa.larisi.presentation.main.reflow.ReflowFragment"
         android:label="@string/menu_reflow"
         tools:layout="@layout/fragment_reflow" />
 
     <fragment
         android:id="@+id/nav_slideshow"
-        android:name="com.zulfa.larisi.ui.slideshow.SlideshowFragment"
+        android:name="com.zulfa.larisi.presentation.main.slideshow.SlideshowFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
 
     <fragment
         android:id="@+id/nav_settings"
-        android:name="com.zulfa.larisi.ui.settings.SettingsFragment"
+        android:name="com.zulfa.larisi.presentation.main.settings.SettingsFragment"
         android:label="@string/menu_settings"
         tools:layout="@layout/fragment_settings" />
 </navigation>
