@@ -45,8 +45,9 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="60dp"
         android:fontFamily="@font/poppins_medium"
+        android:padding="20dp"
         android:text="@string/tv_welcome2"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
@@ -66,6 +67,6 @@
         app:layout_constraintEnd_toEndOf="@+id/bottom_background"
         app:layout_constraintStart_toStartOf="@+id/bottom_background"
         app:layout_constraintTop_toTopOf="@+id/bottom_background"
-        app:layout_constraintVertical_bias="0.587" />
+        app:layout_constraintVertical_bias="0.686" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

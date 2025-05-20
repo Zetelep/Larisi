@@ -1,12 +1,12 @@
 package com.zulfa.larisi.core.domain.usecase
 
-import com.zulfa.larisi.core.data.AuthRepository
 import com.zulfa.larisi.core.data.Resource
 import com.zulfa.larisi.core.domain.model.User
+import com.zulfa.larisi.core.domain.repository.IAuthRepository
 import kotlinx.coroutines.flow.Flow
 
 class AuthInteractor(
-    private val repository: AuthRepository
+    private val repository: IAuthRepository
 ) : AuthUseCase {
 
     override fun signInWithGoogle(idToken: String): Flow<Resource<User>> {

@@ -5,8 +5,7 @@ import com.google.firebase.auth.auth
 import com.zulfa.larisi.core.data.AuthRepository
 import com.zulfa.larisi.core.data.FirebaseDataSource
 import com.zulfa.larisi.core.domain.repository.IAuthRepository
-import com.zulfa.larisi.core.domain.usecase.AuthUseCase
-import com.zulfa.larisi.core.domain.usecase.AuthInteractor
+
 
 import org.koin.dsl.module
 
@@ -20,7 +19,4 @@ val authModule = module {
 
     // Repository
     single<IAuthRepository> { AuthRepository(get()) }
-
-    // UseCase (Interactor)
-    single<AuthUseCase> { AuthInteractor(get()) }
 }
