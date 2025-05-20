@@ -5,6 +5,7 @@ import com.zulfa.larisi.core.domain.repository.IAuthRepository
 import com.zulfa.larisi.core.utils.DataMapper.toUser
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
 
@@ -15,12 +16,10 @@ class AuthRepository(
     override fun signInWithGoogle(idToken: String): Flow<Resource<User>> = flow {
         emit(Resource.Loading())
         val firebaseUser = firebaseDataSource.signInWithGoogle(idToken)
+        emit(Resource.Success(firebaseUser.toUser()))
+    }.catch { e ->
+        emit(Resource.Error(e.message ?: "Sign in failed"))
 
-        if (firebaseUser != null) {
-            emit(Resource.Success(firebaseUser.toUser()))
-        } else {
-            emit(Resource.Error("Sign in failed"))
-        }
     }.flowOn(Dispatchers.IO)
 
     override fun getCurrentUser(): User? {

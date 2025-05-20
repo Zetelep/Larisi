@@ -7,14 +7,10 @@ import kotlinx.coroutines.tasks.await
 
 class FirebaseDataSource(private val auth: FirebaseAuth) {
 
-    suspend fun signInWithGoogle(idToken: String): FirebaseUser? {
-        return try {
-            val credential = GoogleAuthProvider.getCredential(idToken, null)
-            val result = auth.signInWithCredential(credential).await()
-            result.user
-        } catch (e: Exception) {
-            null
-        }
+    suspend fun signInWithGoogle(idToken: String): FirebaseUser {
+        val credential = GoogleAuthProvider.getCredential(idToken, null)
+        val result = auth.signInWithCredential(credential).await()
+        return result.user ?: throw Exception("No user found")
     }
 
     fun getCurrentUser(): FirebaseUser? = auth.currentUser
