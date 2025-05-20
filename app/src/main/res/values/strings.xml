@@ -22,4 +22,8 @@
     <string name="image_view_item_transform_content_description">Represents an image view in the
         item
     </string>
+    <string name="auth_background">auth background</string>
+    <string name="desc_google_sign_in">google sign in</string>
+    <string name="tv_welcome">WELCOME TO LARISI</string>
+    <string name="tv_welcome2">Asisten Kasir Pintar Anda\nTransaksi mudah, cetak struk cepat, dan penyimpanan aman di cloud—semua dalam satu aplikasi.</string>
 </resources>

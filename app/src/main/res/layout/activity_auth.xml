@@ -7,4 +7,65 @@
     android:layout_height="match_parent"
     tools:context=".presentation.auth.AuthActivity">
 
+    <ImageView
+        android:id="@+id/bg_auth"
+        android:layout_width="wrap_content"
+        android:layout_height="400dp"
+        android:contentDescription="@string/auth_background"
+        android:scaleType="centerCrop"
+        android:src="@drawable/auth_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/bottom_background"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/auth_bottom_gradient_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bg_auth" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/tv_welcome"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        android:textStyle="bold"
+
+        app:layout_constraintEnd_toEndOf="@+id/bottom_background"
+        app:layout_constraintStart_toStartOf="@+id/bottom_background"
+        app:layout_constraintTop_toTopOf="@+id/bottom_background" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/tv_welcome2"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintEnd_toEndOf="@+id/bottom_background"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/bottom_background"
+        app:layout_constraintTop_toTopOf="@+id/bottom_background" />
+
+    <ImageButton
+        android:id="@+id/btn_signin_google"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/desc_google_sign_in"
+        android:src="@drawable/android_neutral_rd_ctn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/bottom_background"
+        app:layout_constraintStart_toStartOf="@+id/bottom_background"
+        app:layout_constraintTop_toTopOf="@+id/bottom_background"
+        app:layout_constraintVertical_bias="0.587" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
