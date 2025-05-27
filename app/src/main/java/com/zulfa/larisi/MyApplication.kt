@@ -2,8 +2,10 @@ package com.zulfa.larisi
 
 import android.app.Application
 import com.zulfa.larisi.core.di.authModule
+import com.zulfa.larisi.core.di.menuFirestoreModule
 import com.zulfa.larisi.presentation.di.authUseCase
 import com.zulfa.larisi.presentation.di.helperModule
+import com.zulfa.larisi.presentation.di.menuItemUseCase
 import com.zulfa.larisi.presentation.di.viewModelModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
@@ -20,7 +22,9 @@ class MyApplication : Application() {
                     authModule,
                     viewModelModule,
                     helperModule,
-                    authUseCase
+                    authUseCase,
+                    menuFirestoreModule,
+                    menuItemUseCase
                 )
             )
         }

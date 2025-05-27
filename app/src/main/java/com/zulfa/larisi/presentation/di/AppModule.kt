@@ -2,6 +2,8 @@ package com.zulfa.larisi.presentation.di
 
 import com.zulfa.larisi.core.domain.usecase.AuthInteractor
 import com.zulfa.larisi.core.domain.usecase.AuthUseCase
+import com.zulfa.larisi.core.domain.usecase.MenuItemInteractor
+import com.zulfa.larisi.core.domain.usecase.MenuItemUseCase
 import com.zulfa.larisi.presentation.auth.AuthViewModel
 import com.zulfa.larisi.presentation.helper.CredentialHelper
 import org.koin.androidx.viewmodel.dsl.viewModel
@@ -17,4 +19,8 @@ val helperModule = module {
 
 val authUseCase = module {
     factory<AuthUseCase> { AuthInteractor(get()) }
+}
+
+val menuItemUseCase = module {
+    factory<MenuItemUseCase> { MenuItemInteractor(get()) }
 }
